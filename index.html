@@ -1,0 +1,152 @@
+<HTML>
+<head>
+    <style>
+body {
+	background: #f30404;
+	font-family: 'ubuntu',sans-serif;
+	background-color:#fff6f6;
+}
+.container {
+	display: block;
+	width: 400px;
+	margin: 10px auto 100px;
+	background-color:#080808;
+	padding:0px 10px 10px 10px;
+	border-radius:10px
+}
+h2 {
+	text-align:center;
+	/* padding-top:12px; */
+	margin-bottom:0px;
+    /* background-color: red; */
+    color: white;
+    padding: 15px 12px 10px 11px;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li * {
+	float: left;
+}
+li,
+h3 {
+	clear: both;
+	list-style: none;
+}
+input,
+button {
+	outline: none;
+}
+button {
+	background: none;
+	border: 0px;
+	color: #888;
+	font-size: 15px;
+	width: 60px;
+	margin: 10px 0 0;
+	font-family: Lato, sans-serif;
+	cursor: pointer;
+}
+button:hover {
+	color: #f8d2d2;
+    transition: all 0.6s;
+    text-shadow: #f01212;
+}
+h3,
+label[for='new-task'] {
+	color: #4be2b5;
+	font-weight: 700;
+	font-size: 15px;
+	border-bottom: 2px solid #333;
+	padding: 20px 0 10px;
+	margin: 0;
+	text-transform: uppercase;
+}
+h3:hover{
+    color: greenyellow;
+    transition: all 0.7s;
+}
+input[type="text"] {
+	margin: 0;
+	font-size: 18px;
+	line-height: 18px;
+	height: 18px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	background: #fff;
+	border-radius: 6px;
+	font-family: Lato, sans-serif;
+	color: #888;
+}
+input[type="text"]:focus {
+	color: #f00707e7;
+}
+label[for='new-task'] {
+	display: block;
+	margin: 0 0 20px;
+}
+input#new-task {
+	float: left;
+	width: 318px;
+}
+p > button:hover {
+	color: #eff5f4;
+}
+li {
+	overflow:hidden;
+	padding: 20px 0;
+	border-bottom: 1px solid #eee;
+}
+li > input[type="checkbox"] {
+	margin: 0 10px;
+	position: relative;
+	top: 15px;
+}
+li > label {
+	font-size: 18px;
+	line-height: 40px;
+	width: 237px;
+	padding: 0 0 0 11px;
+    color: blueviolet;
+}
+li > input[type="text"] {
+	width: 226px;
+}
+li > .delete:hover {
+	color: #f01212;
+}
+#completed-tasks label {
+	text-decoration: line-through;
+	color: #14f01fe7;
+}
+ul li input[type=text] {
+	display: none;
+}
+ul li.editMode input[type=text] {
+	display: block;
+}
+ul li.editMode label {
+	display: none;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h2>TODO LIST</h2>
+		<h3>Add Item</h3>
+		<p>
+			<input id="new-task" type="text" placeholder="Enter a new task..."><button>Add</button>
+		</p>
+
+		<h3>To do</h3>
+		<ul id="incomplete-tasks">
+		</ul>
+
+		<h3>Completed</h3>
+		<ul id="completed-tasks">
+		</ul>
+	</div>
+    <script src="todolist.js"></script>
+</body>
+</HTML>
